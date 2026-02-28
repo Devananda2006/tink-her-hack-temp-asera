@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Match Engine</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="runMatch()">
+
+<div class="topbar">
+<h2>Match Engine</h2>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div id="matchArea"></div>
+
+<script src="app.js"></script>
+<script>
+function runMatch(){
+checkLogin();
+matchArea.innerHTML="";
+
+posts.forEach(r=>{
+if(r.type==="Request"){
+posts.forEach(d=>{
+if(
+(d.type==="Donate" &&
+r.category===d.category &&
+r.item===d.item &&
+r.location.toLowerCase()===d.location.toLowerCase())
+||
+(d.type==="Offer" &&
+d.text.toLowerCase().includes(r.item.toLowerCase()))
+){
+r.status="Matched";
+matchArea.innerHTML+=`
+<div class="post-card">
+Match Found: ${r.user} ↔ ${d.user}
+</div>
+`;
+}
+});
+}
+});
+savePosts();
+}
+</script>
+</body>
+</html>
