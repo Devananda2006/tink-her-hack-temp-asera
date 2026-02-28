@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+
+<div class="topbar">
+<h2>Donate</h2>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="card">
+<select id="dCategory">
+<option>Food</option>
+<option>Medicine</option>
+<option>Emergency</option>
+<option>Shelter</option>
+</select>
+<input id="dItem" placeholder="Item">
+<input id="dQuantity" placeholder="Quantity">
+<input id="dLocation" placeholder="Location">
+<input id="dContact" placeholder="Contact">
+<textarea id="dDetails" placeholder="Details"></textarea>
+<button onclick="addDonate()">Submit</button>
+</div>
+
+<script src="app.js"></script>
+<script>
+function addDonate(){
+let user = checkLogin();
+posts.push({
+id:Date.now(),
+type:"Donate",
+user:user,
+category:dCategory.value,
+item:dItem.value,
+quantity:dQuantity.value,
+location:dLocation.value,
+contact:dContact.value,
+details:dDetails.value
+});
+savePosts();
+alert("Donation Added");
+}
+</script>
+</body>
+</html>
