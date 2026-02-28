@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Volunteer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+
+<div class="topbar">
+<h2>Volunteer</h2>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="card">
+<input id="vName" placeholder="Name">
+<input id="vLocation" placeholder="Location">
+<input id="vContact" placeholder="Contact">
+<button onclick="addVolunteer()">Submit</button>
+</div>
+
+<script src="app.js"></script>
+<script>
+function addVolunteer(){
+let user = checkLogin();
+posts.push({
+id:Date.now(),
+type:"Volunteer",
+user:user,
+name:vName.value,
+location:vLocation.value,
+contact:vContact.value
+});
+savePosts();
+alert("Volunteer Added");
+}
+</script>
+</body>
+</html>
