@@ -2,27 +2,27 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [ASERA] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [Codemates]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Devananda Joshy] - [College of engineering perumon]
+- Member 2: [Aparna A] - [College of engineering perumon]
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[It is developed to centralize a community help during disasters]
 
 ### The Problem statement
-[What problem are you solving?]
+[During disasters, emergencies, and sudden financial crises, many individuals and families struggle to access basic necessities such as food, clean water, medicines, shelter, and rent support. Existing support systems are often slow, unorganized, or difficult to access at the right time. Information about available help is scattered across multiple platforms, making it hard for affected people to find immediate assistance. As a result, many families are left without timely support during critical moments. There is a need for a centralized, fast, and reliable system that connects people in need directly with those willing to help.]
 
 ### The Solution
-[How are you solving it?]
+[The solution is to develop a centralized community help website that connects people affected by disasters with immediate support for food, water, medicine, rent, and other essential needs. The platform allows users to request help, offer assistance, donate resources, and volunteer in one place. By verifying requests and matching them quickly with available help, the system ensures timely, transparent, and reliable support during emergencies.]
 
 ---
 
@@ -31,10 +31,10 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
+- Languages used: [e.g., JavaScript, HTML,CSS]
 - Frameworks used: [e.g., React, Django, Spring Boot]
 - Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Tools used: [e.g., VS Code, Git]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,10 +46,12 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Resource Offering & Donations
+
+Individuals and organizations can post available resources, donate items, or offer financial support. The platform matches these contributions to verified requests automatically, ensuring nothing goes unused.]
+- Feature 2: [There is request,donate,offer,volunteer options ]
+- Feature 3: [The people who need help can request for help]
+- Feature 4: [The people who are willing to donate,offer,volunteer can also fill details and matching ones show on match and all submissions are seen in the community seacrh.]
 
 ---
 
