@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Offer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+
+<div class="topbar">
+<h2>Offer Help</h2>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="card">
+<input id="oText" placeholder="Offer Description">
+<input id="oLocation" placeholder="Location">
+<input id="oContact" placeholder="Contact">
+<button onclick="addOffer()">Submit</button>
+</div>
+
+<script src="app.js"></script>
+<script>
+function addOffer(){
+let user = checkLogin();
+posts.push({
+id:Date.now(),
+type:"Offer",
+user:user,
+text:oText.value,
+location:oLocation.value,
+contact:oContact.value
+});
+savePosts();
+alert("Offer Added");
+}
+</script>
+</body>
+</html>
