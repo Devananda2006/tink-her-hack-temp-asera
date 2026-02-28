@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+
+<div class="topbar">
+<h2>ASERA Dashboard</h2>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="grid">
+<div class="box" onclick="location.href='request.html'">Request</div>
+<div class="box" onclick="location.href='donate.html'">Donate</div>
+<div class="box" onclick="location.href='offer.html'">Offer</div>
+<div class="box" onclick="location.href='volunteer.html'">Volunteer</div>
+<div class="box" onclick="location.href='community.html'">Community</div>
+<div class="box" onclick="location.href='match.html'">Match</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
