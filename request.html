@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Request Help</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+
+<div class="topbar">
+<h2>Request Help</h2>
+<div>
+<span class="link-btn" onclick="location.href='dashboard.html'">Dashboard</span>
+<button onclick="logout()">Logout</button>
+</div>
+</div>
+
+<div class="card">
+<select id="rCategory">
+<option>Food</option>
+<option>Medicine</option>
+<option>Emergency</option>
+<option>Shelter</option>
+</select>
+
+<input id="rItem" placeholder="Item">
+<input id="rQuantity" placeholder="Quantity">
+<input id="rLocation" placeholder="Location">
+<input id="rContact" placeholder="Contact">
+<select id="rPriority">
+<option>Emergency</option>
+<option>Urgent</option>
+<option>Normal</option>
+</select>
+<textarea id="rDetails" placeholder="Details"></textarea>
+
+<button onclick="addRequest()">Submit</button>
+</div>
+
+<script src="app.js"></script>
+<script>
+function addRequest(){
+let user = checkLogin();
+posts.push({
+id:Date.now(),
+type:"Request",
+user:user,
+category:rCategory.value,
+item:rItem.value,
+quantity:rQuantity.value,
+location:rLocation.value,
+contact:rContact.value,
+details:rDetails.value,
+priority:rPriority.value,
+status:"Open"
+});
+savePosts();
+alert("Request Added");
+}
+</script>
+</body>
+</html>
