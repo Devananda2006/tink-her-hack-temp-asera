@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Community</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadCommunity()">
+
+<div class="topbar">
+<h2>Community</h2>
+<button onclick="logout()">Logout</button>
+</div>
+
+<input id="search" placeholder="Search..." onkeyup="searchPosts()">
+
+<div id="postArea"></div>
+
+<script src="app.js"></script>
+<script>
+function loadCommunity(){
+checkLogin();
+displayPosts(posts);
+}
+
+function displayPosts(data){
+postArea.innerHTML="";
+data.forEach(p=>{
+postArea.innerHTML+=`
+<div class="post-card">
+<b>${p.type}</b> by ${p.user}<br>
+${p.category||""} ${p.item||p.text||""}<br>
+Location: ${p.location}<br>
+Status: <span class="${p.status==="Matched"?"status-matched":"status-open"}">${p.status||"Open"}</span><br>
+<button onclick="alert('Contact: ${p.contact}')">Reveal Contact</button>
+</div>
+`;
+});
+}
+
+function searchPosts(){
+let val=search.value.toLowerCase();
+let filtered=posts.filter(p=>JSON.stringify(p).toLowerCase().includes(val));
+displayPosts(filtered);
+}
+</script>
+</body>
+</html>
